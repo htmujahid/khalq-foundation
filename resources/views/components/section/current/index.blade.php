@@ -2,7 +2,7 @@
     <x-container topBottom>
         <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-16 gap-y-8 py-16 ">
             <div class="mx-auto">
-                <x-card.case :id="$id" :required="$required" :remaining="$remaining" :collected="$collected" :accounts="$accounts" />
+                <x-card.case :id="$id" :description="$description" :required="$required" :remaining="$remaining" :collected="$collected" :accounts="$accounts" />
             </div>
             <div class="sm:mx-auto lg:mx-0">
                 <x-heading.h4>{{$category}}</x-heading.h4>

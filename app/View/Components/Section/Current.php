@@ -10,6 +10,7 @@ class Current extends Component
 {
     public $id;
     public $category;
+    public $description;
     public $status;
     public $collected;
     public $required;
@@ -24,6 +25,7 @@ class Current extends Component
     {
         $this->id = $cases->latest()->first()->id;
         $this->category = $cases->latest()->first()->category;
+        $this->description = $cases->latest()->first()->description;
         $this->status = $cases->latest()->first()->status;
         $this->required = $cases->latest()->first()->amount;
         if($this->status == 'Finished'){
