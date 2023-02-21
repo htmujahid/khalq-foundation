@@ -29,13 +29,14 @@
             </x-table.tr>
         </x-table.thead>
         <x-table.tbody>
-            @foreach ($cases as $case)                
+            @foreach ($cases as $case)
+            @php($count= $loop->index + 1)                
                 <x-table.tr>
                     <x-table.td>
                     </x-table.td>
 
                     <x-table.td class="w-1/12 pl-4">
-                        {{$case->id}}
+                        {{$count}}
                     </x-table.td>
 
                     <x-table.td class="w-3/12" >
