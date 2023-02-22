@@ -5,7 +5,7 @@
   </div>
   <p class="hide-scrollbar h-[140px] overflow-y-scroll px-6 text-justify text-sm">{{$description}}</p>
   <p class="mt-2 px-6 text-justify text-sm">For Details Please Contact: 0315-4381490</p>
-  <div class="my-1 flex justify-between px-6 text-center text-sm font-semibold">
+  <div class="my-2 flex justify-between px-6 text-center text-sm font-semibold">
     <div class="w-full rounded-l-full border">Required <span class="block">{{(int)($required)}}</span></div>
     <div class="w-full border">Collected <span class="block">{{(int)($collected)}}</span></div>
     <div class="w-full rounded-r-full border">Remaining <span class="block">{{(int)($remaining)}}</span></div>
@@ -16,9 +16,9 @@
           @forelse ($accounts as $account)        
               <div class="shrink-0 text-center">
                   <div class="mx-auto w-full rounded-full bg-white border border-white py-1 px-2">
-                      <img src="/assets/images/accounts/{{strtolower($account->bank_name)}}.png" alt="" class="h-5 mx-auto">
+                      <img src="/assets/images/accounts/{{strtolower($account->bank_name)}}.png" alt="" class="h-4 mx-auto">
                   </div>
-                  <p class="mt-1 h-4 overflow-hidden text-xs">{{$account->account_name}}</p>
+                  <p class="mt-1 h-4 overflow-hidden text-xs w-24 mx-auto">{{$account->account_name}}</p>
                   <p class="text-sm">{{$account->account_number}}</p>
               </div>
           @empty
