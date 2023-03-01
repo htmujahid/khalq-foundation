@@ -3,7 +3,7 @@
         <div class="pl-4 
             md:flex md:items-center md:justify-between md:gap-8 md:h-16 md:pl-0">
             <div class="flex items-center justify-between h-16 gap-8 
-                md:h-full md:w-full md:w-auto">
+                md:h-full md:w-auto">
                 <div id="logo" class="">
                     <a href="/" >
                         <x-application.logo />                   
@@ -15,7 +15,7 @@
             </div>
             <div id="backdrop" class="hidden backdrop-blur-sm absolute top-16 left-0 h-screen w-screen"></div>
             <div id="nav" class="absolute z-50 top-16 left-0 h-[calc(100vh-64px)] w-64 pl-4 border -translate-x-full bg-primary overflow-hidden text-lg
-                md:h-auto md:w-auto md:pl-0 md:w-full md:static md:flex md:items-center md:gap-8 md:border-none md:translate-x-0"           
+                md:h-auto md:w-auto md:pl-0 md:static md:flex md:items-center md:gap-8 md:border-none md:translate-x-0"           
             data-visible="false">
                 <ul class="font-medium py-2 w-full flex gap-2 flex-col 
                     md:flex-row md:gap-8 ">
