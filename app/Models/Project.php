@@ -49,5 +49,8 @@ class Project extends Model
         'status',
     ];
 
+    public function project_donation(){
+        return $this->hasMany(ProjectDonation::class);
+    }
     
 }
