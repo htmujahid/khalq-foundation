@@ -3,6 +3,7 @@
 namespace App\Orchid\Layouts\Story;
 
 use Orchid\Screen\Field;
+use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\DateTimer;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Select;
@@ -31,9 +32,13 @@ class StoryEditLayout extends Rows
                 ->required()
                 ->title(__('Description')),
 
-            Input::make('story.image')
-                ->type('text')
-                ->title(__('Image')),
+            Cropper::make('story.image')
+                ->title('image')
+                ->width(356)
+                ->height(224)
+                ->targetRelativeUrl()
+                ->storage('public')
+                ->path('stories'),
 
             Input::make('story.link')
                 ->type('text')

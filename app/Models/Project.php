@@ -10,7 +10,7 @@ use Orchid\Screen\AsSource;
 
 class Project extends Model
 {
-    use HasFactory, AsSource, Filterable;
+    use HasFactory, AsSource, Filterable, Attachable;
 
     protected $fillable = [
         'title',
