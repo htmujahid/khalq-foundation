@@ -30,13 +30,12 @@
         </x-table.thead>
         <x-table.tbody>
             @foreach ($cases as $case)
-            @php($count= $loop->index + 1)                
                 <x-table.tr>
                     <x-table.td>
                     </x-table.td>
 
                     <x-table.td class="w-1/12 pl-4">
-                        {{$count}}
+                        {{ $cases->firstItem() + $loop->index }}
                     </x-table.td>
 
                     <x-table.td class="w-3/12" >
@@ -67,4 +66,5 @@
             @endforeach
         </x-table.tbody>
     </x-table>
+    {{ $cases->links() }}
 </x-container>

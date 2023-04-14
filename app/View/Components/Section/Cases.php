@@ -16,7 +16,7 @@ class Cases extends Component
      */
     public function __construct(CasesData $casesData)
     {
-        $this->cases = $casesData::orderBy('id','desc')->get();
+        $this->cases = $casesData::orderBy('id','desc')->paginate(10);
     }
 
     /**
