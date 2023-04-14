@@ -58,7 +58,7 @@ class TeamMemberEditLayout extends Rows
 
             Cropper::make('team_member.image')
                 ->title('image')
-                ->maxSize(1024 * 1024 * 10)
+                ->maxFileSize(10)
                 ->width(200)
                 ->height(200)
                 ->targetRelativeUrl()
