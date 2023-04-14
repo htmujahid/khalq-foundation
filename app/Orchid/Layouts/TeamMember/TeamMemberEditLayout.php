@@ -3,6 +3,7 @@
 namespace App\Orchid\Layouts\TeamMember;
 
 use Orchid\Screen\Field;
+use Orchid\Screen\Fields\Cropper;
 use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Fields\Select;
 use Orchid\Screen\Fields\TextArea;
@@ -54,6 +55,14 @@ class TeamMemberEditLayout extends Rows
                 ->type('email')
                 ->required()
                 ->title(__('Email')),
+
+            Cropper::make('team_member.image')
+                ->title('image')
+                ->width(200)
+                ->height(200)
+                ->targetRelativeUrl()
+                ->storage('public')
+                ->path('team_members'),
 
             Select::make('team_member.designation')
                 ->options([
