@@ -66,7 +66,7 @@ class Current extends Component
         $this->description = $currentProject->description;
         $this->status = $currentProject->status;
         $this->required = $currentProject->outcome;
-        if ($this->required != 0){
+        if ($this->required){
             $this->collected = $currentProject->project_donation()->sum('amount');
             $this->status = $this->collected / $this->required * 100;
             $this->remaining = $this->required - $this->collected;
