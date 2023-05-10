@@ -4,50 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Filters\Filterable;
-use Orchid\Screen\AsSource;
 
 class TeamMember extends Model
 {
-    use HasFactory, AsSource, Filterable;
-
-    protected $fillable = [
-        'name',
-        'gender',
-        'contact',
-        'email',
-        'address',
-        'image',
-        'designation',
-        'portfolio',
-        'created_by',
-        'updated_by'
-    ];
-    
-    /**
-     * The attributes for which you can use filters in url.
-     *
-     * @var array
-     */
-    protected $allowedFilters = [
-        'id',
-        'name',
-        'email',
-        'contact',
-        'address'
-    ];
-
-    /**
-     * The attributes for which can use sort in url.
-     *
-     * @var array
-     */
-    protected $allowedSorts = [
-        'id',
-        'name',
-        'email',
-        'contact',
-        'address'
-    ];
-
+    use HasFactory;
+    public function team_member_gtm(){
+        return $this->hasOne(TeamMemberGTM::class, 'member_id');
+    }
+    public function team_member_am(){
+        return $this->hasOne(TeamMemberAM::class, 'member_id');
+    }
+    public function team_member_ca(){
+        return $this->hasOne(TeamMemberCA::class, 'member_id');
+    }
 }

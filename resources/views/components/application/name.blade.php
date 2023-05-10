@@ -1,1 +1,0 @@
-KHALQ Foundation Pakistan

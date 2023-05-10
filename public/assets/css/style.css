@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap");
+
+:root {
+    --primary-color: #11b28e;
+    --text-color: #0f6b57;
+    --background-color: #fff;
+    --secondary-color: #dcf5f5;
+}
+html {
+    font-family: "DM Sans", sans-serif;
+}
+
+.color-1 {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+}
+.hover\:color-1:hover {
+    color: var(--primary-color);
+    background-color: var(--background-color);
+    transition-duration: 0.3s;
+}
+.color-2 {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+}
+.hover\:color-2:hover {
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    transition-duration: 0.3s;
+}
+.color-3 {
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+.color-4 {
+    color: var(--text-color);
+    background: var(--secondary-color);
+}
+.color-5 {
+    color: black;
+    background: var(--secondary-color);
+}
+.font-1 {
+    font-family: "DM Serif Display", serif;
+}
+.gradient-1 {
+    background: linear-gradient(
+        270deg,
+        #11b28e 0%,
+        rgba(17, 178, 142, 0) 206.62%
+    );
+}
+.gradient-2 {
+    background: linear-gradient(315.61deg, #11b28e 4.73%, #5affdc 162.26%);
+}
+
+.border-1 {
+    border: var(--primary-color) 2px solid;
+}
+.border-2 {
+    border: var(--background-color) 2px solid;
+}
+.shadow-1 {
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+}
+.scroll::-webkit-scrollbar {
+    width: 6px;
+}
+.scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px var(--text-color);
+    box-shadow: inset 0 0 6px #dcf5f5;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    outline: 1px solid white;
+}
+::selection {
+    background: var(--primary-color);
+  }
