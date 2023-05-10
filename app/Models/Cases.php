@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Screen\AsSource;
-use Orchid\Filters\Filterable;
 
 class Cases extends Model
 {
-    use HasFactory, AsSource, Filterable;
+    use HasFactory;
 
     protected $table = 'cases';
 
@@ -28,7 +26,7 @@ class Cases extends Model
         'created_by',
         'updated_by'
     ];
-    
+
     /**
      * The attributes for which you can use filters in url.
      *
@@ -52,9 +50,9 @@ class Cases extends Model
         'amount',
         'status',
     ];
-    
-    public function case_donation(){
+
+    public function case_donation()
+    {
         return $this->hasMany(CaseDonation::class, "case_id");
     }
-    
 }

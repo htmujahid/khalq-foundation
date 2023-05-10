@@ -4,19 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Filters\Filterable;
-use Orchid\Screen\AsSource;
 
 class Account extends Model
 {
-    use HasFactory, AsSource, Filterable;
+    use HasFactory;
 
     protected $fillable = [
         'bank_name',
         'account_name',
         'account_number',
         'status',
-        'created_by',   
+        'created_by',
         'updated_by'
     ];
     /**

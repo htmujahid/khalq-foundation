@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Filters\Filterable;
-use Orchid\Screen\AsSource;
 
 class Review extends Model
 {
-    use HasFactory, AsSource, Filterable;
+    use HasFactory;
 
     protected $fillable = [
         'name',
@@ -18,7 +16,7 @@ class Review extends Model
         'created_by',
         'updated_by'
     ];
-    
+
     /**
      * The attributes for which you can use filters in url.
      *

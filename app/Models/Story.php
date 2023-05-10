@@ -4,12 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Filters\Filterable;
-use Orchid\Screen\AsSource;
 
 class Story extends Model
 {
-    use HasFactory, AsSource, Filterable;
+    use HasFactory;
 
     protected $fillable = [
         'title',
@@ -20,7 +18,7 @@ class Story extends Model
         'created_by',
         'updated_by'
     ];
-    
+
     /**
      * The attributes for which you can use filters in url.
      *
@@ -40,6 +38,4 @@ class Story extends Model
         'id',
         'title',
     ];
-
-    
 }

@@ -4,13 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Orchid\Attachment\Attachable;
-use Orchid\Filters\Filterable;
-use Orchid\Screen\AsSource;
 
 class Project extends Model
 {
-    use HasFactory, AsSource, Filterable, Attachable;
+    use HasFactory;
 
     protected $fillable = [
         'title',
@@ -24,7 +21,7 @@ class Project extends Model
         'created_by',
         'updated_by'
     ];
-    
+
     /**
      * The attributes for which you can use filters in url.
      *
@@ -49,8 +46,8 @@ class Project extends Model
         'status',
     ];
 
-    public function project_donation(){
+    public function project_donation()
+    {
         return $this->hasMany(ProjectDonation::class);
     }
-    
 }
