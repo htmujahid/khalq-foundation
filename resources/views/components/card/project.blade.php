@@ -34,7 +34,7 @@
                 </div> --}}
                 <x-heading.h2 class="font-serif">{{ $item->title }}</x-heading.h2>
                 <div class="py-4 2xl:py-6">
-                    <p class="w-full text-center sm:text-left text-lg text-gray-dark h-36 sm:h-20 overflow-hidden">{{ $item->description }}</p>
+                    <p class="w-full text-center sm:text-left text-lg text-gray-dark max-h-36 sm:h-20 overflow-hidden">{{ $item->description }}</p>
                 </div>
                 {{-- <div class="flex justify-center sm:justify-start">
                     <div class="pr-4 sm:pr-10 border-r ">

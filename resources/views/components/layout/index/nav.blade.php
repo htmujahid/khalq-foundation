@@ -1,5 +1,5 @@
 <nav class="bg-white w-full z-20 top-0 left-0" x-data="{ open: false }" @keydown.window.escape="open = false">
-    <div class="container flex flex-wrap items-center justify-between mx-auto py-5 relative">
+    <div class="container flex flex-wrap items-center justify-between gap-2 mx-auto py-5 relative">
         <a href="/" class="flex items-center">
             <x-application.logo />                   
         </a>
@@ -22,7 +22,7 @@
                 </li>
             </ul>
         </div>
-        <div class="flex md:order-2">
+        <div class="flex md:order-2 gap-2">
             <a href="/donate">
                 <x-button.primary>Donate Now</x-button.primary>
             </a>
