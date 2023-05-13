@@ -2,7 +2,7 @@
     'review' => []
 ])
 <x-card class="h-min">
-    <div class="p-6 sm:px-8 sm:py-10 flex-shrink-0 w-5/6 h-min sm:w-[420px]">
+    <div class="p-6 sm:px-8 sm:py-10 flex-shrink-0 w-5/6 sm:w-[420px] h-min">
         <div class="flex gap-3 items-center">
             <div><p class="font-medium text-3xl">{{$review->name}}</p></div>
         </div>

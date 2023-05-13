@@ -1,6 +1,6 @@
 <x-card class=" w-full sm:w-[450px]">
     <div class="h-full p-8 gap-10">
-        <div class="flex gap-2 items-center pb-2 mx-auto">
+        <div class="flex gap-2 items-center justify-center sm:justify-start pb-2 mx-auto">
             <img src="/assets/icons/mail.svg" alt="" class="">
             <p class="text-lg text-center sm:text-left text-gray-dark">Email Us</p>
         </div>

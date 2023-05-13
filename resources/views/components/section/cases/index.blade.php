@@ -67,6 +67,8 @@
                 @endforeach
             </x-table.tbody>
         </x-table>
-        {{ $cases->links() }}
+        <div class="pb-3 px-3">
+            {{ $cases->links() }}
+        </div>
     </x-card>
 </x-container>

@@ -26,13 +26,13 @@
     <a href="{{$item->link}}">
         <div class="grid grid-cols-1 items-center gap-x-16 gap-y-8 p-4 md:p-9">
             <div class="mx-auto rounded-3xl overflow-hidden">
-                <img src="{{$image ?? ""}}" alt="{{$item->title}}">
+                <img src="{{$image ?? ""}}" alt="{{$item->title}}" class="h-[240px]">
             </div>
             <div class="sm:mx-auto lg:mx-0">
                 {{-- <div class="pb-4 text-center sm:text-left">
                     <span class="inline-block px-5 py-1 rounded-xl text-primary text-sm border border-primary">{{ __("Verified") }}</span>
                 </div> --}}
-                <x-heading.h2 class="font-serif">{{ $item->title }}</x-heading.h2>
+                <x-heading.h3 class="font-serif">{{ $item->title }}</x-heading.h3>
                 <div class="py-4 2xl:py-6">
                     <p class="w-full text-center sm:text-left text-lg text-gray-dark max-h-36 sm:h-20 overflow-hidden">{{ $item->description }}</p>
                 </div>

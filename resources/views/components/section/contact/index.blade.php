@@ -1,6 +1,6 @@
 <x-container topBottom>
     <x-heading title="Contact Details">
-        Have a Question?
+        You can contact us if you have any queries
     </x-heading>
     <div class="flex justify-center flex-wrap gap-x-10 gap-y-4">
         <x-card.contact.email email="queries@khalqfoundation.org"/>
