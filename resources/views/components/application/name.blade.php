@@ -1,1 +1,1 @@
-KHALQ Foundation Pakistan
+KHALQ FOUNDATION PAKISTAN

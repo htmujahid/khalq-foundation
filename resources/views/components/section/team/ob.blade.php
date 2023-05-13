@@ -1,8 +1,8 @@
 <div class="mb-20">
-    <x-heading.h1 bottom center>
-        OBs 
+    <x-heading.h1 center>
+        Office Bearers
     </x-heading.h1>
-    <div class="flex gap-20 justify-center flex-wrap">
+    <div class="flex gap-10 justify-center flex-wrap">
         @forelse ($obs as $ob)
             <x-card.team :member="$ob"/>        
         @empty

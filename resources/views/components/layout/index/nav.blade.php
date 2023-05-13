@@ -1,71 +1,54 @@
-<nav class="bg-primary text-white">
-    <div class="md:container mx-auto relative">
-        <div class="pl-4 
-            md:flex md:items-center md:justify-between md:gap-8 md:h-16 md:pl-0">
-            <div class="flex items-center justify-between h-16 gap-8 
-                md:h-full md:w-auto">
-                <div id="logo" class="">
-                    <a href="/" >
-                        <x-application.logo />                   
-                    </a>
-                </div>
-                <div id="nav-toggler" style="cursor:pointer" class="pr-4 md:hidden">
-                    <img src="./assets/icons/menu-icon.svg" alt="" style="border: 1px solid white" class="rounded-md">
-                </div>
-            </div>
-            <div id="backdrop" class="hidden backdrop-blur-sm absolute top-16 left-0 h-screen w-screen"></div>
-            <div id="nav" class="absolute z-50 top-16 left-0 h-[calc(100vh-64px)] w-64 pl-4 border -translate-x-full bg-primary overflow-hidden text-lg
-                md:h-auto md:w-auto md:pl-0 md:static md:flex md:items-center md:gap-8 md:border-none md:translate-x-0"           
-            data-visible="false">
-                <ul class="font-medium py-2 w-full flex gap-2 flex-col 
-                    md:flex-row md:gap-8 ">
-                    <li class="border-b px-4 md:border-none md:px-0"><a href="/projects" class="hover:opacity-80 duration-300">Projects</a></li>
-                    <li class="border-b px-4 md:border-none md:px-0"><a href="/cases" class="hover:opacity-80 duration-300">Cases</a></li>
-                    <li class="border-b px-4 md:border-none md:px-0"><a href="/stories" class="hover:opacity-80 duration-300">Our Stories</a></li>
-                    <li class="border-b px-4 md:border-none md:px-0"><a href="/about" class="hover:opacity-80 duration-300">About</a></li>
-                    <li class="border-b px-4 md:border-none md:px-0"><a href="/contact" class="hover:opacity-80 duration-300">Contact</a></li>
-                </ul>
-                <div class="pt-2 h-12 w-full 
-                    md:h-auto md:pt-0 md:w-auto">
-                    <a href="/donate" class="bg-white text-primary px-4 py-1 inline-block w-full duration-300 border border-white 
-                        md:rounded-md 
-                        hover:bg-opacity-90">Donate</a>
-                </div>
-            </div>
+<nav class="bg-white w-full z-20 top-0 left-0" x-data="{ open: false }" @keydown.window.escape="open = false">
+    <div class="container flex flex-wrap items-center justify-between mx-auto py-5 relative">
+        <a href="/" class="flex items-center">
+            <x-application.logo />                   
+        </a>
+        <div class="items-center justify-between hidden relative md:static w-full md:flex md:w-auto md:order-1" id="navbar-sticky" x-cloak>
+            <ul class="flex flex-col p-4 md:static text-gray-dark md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white" >
+                <li>
+                    <a href="/" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Home</a>
+                </li>
+                <li>
+                    <a href="/projects" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Projects</a>
+                </li>
+                <li>
+                    <a href="/cases" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Cases</a>
+                </li>
+                <li>
+                    <a href="/about" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">About Us</a>
+                </li>
+                <li>
+                    <a href="/contact" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex md:order-2">
+            <a href="/donate">
+                <x-button.primary>Donate Now</x-button.primary>
+            </a>
+            <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center px-3 py-2 border-2 text-gray-dark rounded-lg md:hidden hover:bg-gray-light focus:outline-none focus:ring-2 focus:ring-gray-light" aria-controls="navbar-sticky" :aria-expanded="open.toString()" @click="open = !open">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+            </button>
         </div>
     </div>
+    <div class="items-center justify-between hidden absolute md:static w-full md:w-auto md:order-1 px-6 md:hidden" id="navbar-sticky" :class="{ 'block': open, 'hidden': !open }" x-cloak>
+        <ul class="flex flex-col p-4 text-gray-dark font-medium border border-gray-100 rounded-lg bg-gray-50 border-2" >
+            <li>
+                <a href="/" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Home</a>
+            </li>
+            <li>
+                <a href="/projects" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Projects</a>
+            </li>
+            <li>
+                <a href="/cases" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Cases</a>
+            </li>
+            <li>
+                <a href="/about" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">About Us</a>
+            </li>
+            <li>
+                <a href="/contact" class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:opacity-80 md:p-0">Contact Us</a>
+            </li>
+        </ul>
+    </div>
 </nav>
-
-<x-script>
-        let toggle = document.getElementById("nav-toggler")
-        let nav =document.getElementById("nav")
-        let backdrop = document.getElementById("backdrop")
-        window.addEventListener("resize", function(){
-            if(window.innerWidth > 768){
-                backdrop.style.display = "none"
-                nav.style.transform = "translateX(0)"
-            }else{
-                nav.style.transform = "translateX(-100%)"
-                toggle.children[0].src = "./assets/icons/menu-icon.svg"
-            }
-            nav.setAttribute("data-visible", "false")
-            nav.style.transitionDuration = "0s"
-        })
-        toggle.addEventListener("click",()=>{
-            let visible = nav.getAttribute("data-visible")
-            nav.style.transitionDuration = "0.5s"
-            if(visible=="false"){
-                nav.style.transform = "translateX(0%)"
-                nav.setAttribute("data-visible","true")
-                toggle.children[0].src = "./assets/icons/menu-close.svg"
-                document.body.style.overflow = "hidden"
-                backdrop.style.display = "block"
-            }else{
-                nav.style.transform = "translateX(-100%)"
-                nav.setAttribute("data-visible","false")
-                toggle.children[0].src = "./assets/icons/menu-icon.svg"
-                document.body.style.overflow = "auto"
-                backdrop.style.display = "none"
-            }
-        })
-</x-script>

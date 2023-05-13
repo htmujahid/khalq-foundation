@@ -1,19 +1,15 @@
-<x-container>
-    <x-heading title="About Us">
-        Non-Profitable Charity Organization
-    </x-heading>
-    <div class="text-lg mb-16 mt-10 md:w-1/2 my-10">
-        <p>
-            KHALQ Foundation Pakistan is a student-led non-profit organization dedicated to serve society. We were founded in 2020 by a group of passionate and driven students who wanted to make a difference in their community.
-        </p>
-        <br>
-        <p>
-            Since then, we have grown and expanded our reach, but our mission remains the same: to serve the society. We believe that every person has the power to create positive change, and we are committed to using our skills and resources to help those in need.
-        </p>
-        <br>
-        <p>
-            Our team is made up of dedicated volunteers from different educational institutes who are committed to making a difference. We rely on the support of our community to carry out our mission, and we are grateful for every person who joins us in the fight to work for society.
-        </p>
-    </div>
-    <x-card.quote />      
+<x-container topBottom>
+    <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-8">
+        <div class="order-2 lg:order-1">
+            <x-heading.main title="Our Journey to Serve the Society">
+                ABOUT US
+            </x-heading.main>
+            <x-heading.h5 class="mt-4 text-gray-dark" style="line-height: 1.9">
+                Started in 2020, a student group united to create a positive impact in their community. Despite growth and expansion, their goal to serve society has remained constant.
+            </x-heading.h5>
+        </div>
+        <div class="order-1 lg:order-2">
+            <img src="assets/images/courtesy.png" alt="" class="ml-auto">
+        </div>
+    </div>      
 </x-container>

@@ -16,11 +16,24 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    light: "#DCF5F5",
-                    DEFAULT: "#11B28E",
-                    dark: "#0F6B57",
+                    DEFAULT: "#0AA884",
+                },
+                gray: {
+                    DEFAULT: "#F5F5F5",
+                    light: "#FAFBFC",
+                    dark: "rgba(30, 30, 30, 0.7)",
                 },
             },
+        },
+        container: {
+            padding: {
+                DEFAULT: "1rem",
+                sm: "2rem",
+                lg: "4rem",
+                xl: "5rem",
+                "2xl": "6rem",
+            },
+            center: true,
         },
     },
 };

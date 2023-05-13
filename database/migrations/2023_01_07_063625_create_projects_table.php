@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('outcome');
+            $table->string('outcome')->nullable();
             $table->string('status');
             $table->text('image')->nullable();
             $table->string('link')->nullable();
